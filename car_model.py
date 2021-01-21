@@ -4,10 +4,7 @@ import RPi.GPIO as GPIO
 
 
 class car:
-    FORWARD = 26
-    BACK = 6
-    LEFT = 13
-    RIGHT = 19
+    
     def __init__(self):
         self.state = [0,0,0,0]#forward, back, left, right
         self.setupGPIO()
@@ -33,21 +30,30 @@ class car:
         self.state = [0,0,0,0]
         
     def updateVehicle(self):
+        FORWARD = 26
+        BACK = 6
+        LEFT = 13
+        RIGHT = 19
+        
         state = self.state
         if state[0] == 1:
+            print("Going Forward")
             GPIO.output(FORWARD, GPIO.HIGH)
         else:
             GPIO.output(FORWARD, GPIO.LOW)
         if state[1] == 1:
+            print("Going Back")
             GPIO.output(BACK, GPIO.HIGH)
         else:
             GPIO.output(BACK, GPIO.LOW)
         if state[2] == 1:
+            print("Going Left")
             GPIO.output(LEFT, GPIO.HIGH)
         else:
             GPIO.output(LEFT, GPIO.LOW)
 
         if state[3] == 1:
+            print("Going Left")
             GPIO.output(RIGHT, GPIO.HIGH)
         else:
             GPIO.output(RIGHT, GPIO.LOW)
