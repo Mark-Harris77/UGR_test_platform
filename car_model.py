@@ -1,16 +1,17 @@
 import RPi.GPIO as GPIO
 
-FORWARD = 26
-BACK = 6
-LEFT = 13
-RIGHT = 19
+
 
 
 class car:
+    FORWARD = 26
+    BACK = 6
+    LEFT = 13
+    RIGHT = 19
     def __init__(self):
         self.state = [0,0,0,0]#forward, back, left, right
-
-
+        setupGPIO()
+        
     def goLeft(self):
         self.state[3] = 0
         self.state[2] = 1
