@@ -12,4 +12,6 @@ while(True):
         car.goLeft()
     elif command == 'right':
         car.goRight()
+    elif command == 'stop':
+        car.stop()
     car.updateVehicle()
