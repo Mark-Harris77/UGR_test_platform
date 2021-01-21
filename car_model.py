@@ -10,8 +10,8 @@ class car:
     RIGHT = 19
     def __init__(self):
         self.state = [0,0,0,0]#forward, back, left, right
-        setupGPIO()
-        
+        self.setupGPIO()
+
     def goLeft(self):
         self.state[3] = 0
         self.state[2] = 1
@@ -53,7 +53,7 @@ class car:
             GPIO.output(RIGHT, GPIO.LOW)
 
 
-    def setupGPIO():
+    def setupGPIO(self):
         GPIO.setmode(GPIO.BCM)
         GPIO.setwarnings(False)
         GPIO.setup(6, GPIO.OUT, initial=GPIO.LOW)
