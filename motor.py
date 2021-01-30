@@ -12,6 +12,6 @@ wait = input("Wait for beep")
 motor.ChangeDutyCycle(10)
 wait = input("Wait for beep")
 
-motor.changeDutyCycle(30)
+motor.ChangeDutyCycle(30)
 
 time.sleep(4)
