@@ -25,4 +25,4 @@ for i in range(10):
     a = input("Enter angle: ")
     setWheelAngle(s, a)
 
-finish()
+finish(s)
