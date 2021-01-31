@@ -2,7 +2,7 @@ import RPi.GPIO as GPIO
 import time
 
 def initalize():
-    GPIO.setmode(GPIO.BCM)
+    GPIO.setmode(GPIO.BOARD)
     GPIO.setup(7, GPIO.OUT)
     servo = GPIO.PWM(7, 50)
     servo.start(0)
