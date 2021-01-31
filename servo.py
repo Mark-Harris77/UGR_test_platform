@@ -23,7 +23,7 @@ s = initalize()
 
 
 for i in range(10):
-    a = input("Enter angle: ")
+    a = float(input("Enter angle: "))
     setWheelAngle(s, a)
-z
+
 finish(s)
